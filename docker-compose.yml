@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  ocserv:
+    image: wppurking/ocserv
+    container_name: ocserv
+    restart: always
+    ports:
+      - "443:443/tcp"
+      - "443:443/udp"
+    volumes:
+      - ./files:/etc/ocserv
+    privileged: true
